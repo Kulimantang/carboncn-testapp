@@ -1,0 +1,229 @@
+/* preflight.css  */
+
+:where(.use-preflight),
+:where(.use-preflight *),
+:where(.use-preflight::before),
+:where(.use-preflight::after) {
+    box-sizing: border-box;
+    border-width: 0;
+    border-style: solid;
+    border-color: currentcolor;
+}
+
+/* html {
+    line-height: 1.5;
+    text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: system-ui;
+}
+
+body {
+    margin: 0;
+    line-height: inherit;
+} */
+
+:where(.use-preflight hr) {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+}
+
+:where(.use-preflight abbr:where([title])) {
+    text-decoration: underline dotted;
+}
+
+:where(.use-preflight h1),
+:where(.use-preflight h2),
+:where(.use-preflight h3),
+:where(.use-preflight h4),
+:where(.use-preflight h5),
+:where(.use-preflight h6) {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+:where(.use-preflight a) {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+:where(.use-preflight b),
+:where(.use-preflight strong) {
+    font-weight: bolder;
+}
+
+:where(.use-preflight code),
+:where(.use-preflight kbd),
+:where(.use-preflight samp),
+:where(.use-preflight pre) {
+    font-family:
+        "fontFamily.mono",
+        ui-monospace,
+        SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
+    font-size: 1em;
+}
+
+:where(.use-preflight small) {
+    font-size: 80%;
+}
+
+:where(.use-preflight sub),
+:where(.use-preflight sup) {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+:where(.use-preflight sub) {
+    bottom: -0.25em;
+}
+
+:where(.use-preflight sup) {
+    top: -0.5em;
+}
+
+:where(.use-preflight table) {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+}
+
+:where(.use-preflight button),
+:where(.use-preflight input),
+:where(.use-preflight optgroup),
+:where(.use-preflight select),
+:where(.use-preflight textarea) {
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    line-height: inherit;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:where(.use-preflight button),
+:where(.use-preflight select) {
+    text-transform: none;
+}
+
+:where(.use-preflight button),
+:where(.use-preflight [type="button"]),
+:where(.use-preflight [type="reset"]),
+:where(.use-preflight [type="submit"]) {
+    appearance: button;
+    background-color: transparent;
+    background-image: none;
+}
+
+:where(.use-preflight :-moz-focusring) {
+    outline: auto;
+}
+
+:where(.use-preflight :-moz-ui-invalid) {
+    box-shadow: none;
+}
+
+:where(.use-preflight progress) {
+    vertical-align: baseline;
+}
+
+:where(.use-preflight ::-webkit-inner-spin-button),
+:where(.use-preflight ::-webkit-outer-spin-button) {
+    height: auto;
+}
+
+:where(.use-preflight [type="search"]) {
+    appearance: textfield;
+    outline-offset: -2px;
+}
+
+:where(.use-preflight ::-webkit-search-decoration) {
+    appearance: none;
+}
+
+:where(.use-preflight ::-webkit-file-upload-button) {
+    appearance: button;
+    font: inherit;
+}
+
+:where(.use-preflight summary) {
+    display: list-item;
+}
+
+:where(.use-preflight blockquote),
+:where(.use-preflight dl),
+:where(.use-preflight dd),
+:where(.use-preflight h1),
+:where(.use-preflight h2),
+:where(.use-preflight h3),
+:where(.use-preflight h4),
+:where(.use-preflight h5),
+:where(.use-preflight h6),
+:where(.use-preflight hr),
+:where(.use-preflight figure),
+:where(.use-preflight p),
+:where(.use-preflight pre) {
+    margin: 0;
+}
+
+:where(.use-preflight fieldset) {
+    margin: 0;
+    padding: 0;
+}
+
+:where(.use-preflight legend) {
+    padding: 0;
+}
+
+:where(.use-preflight ol),
+:where(.use-preflight ul),
+:where(.use-preflight menu) {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+:where(.use-preflight textarea) {
+    resize: vertical;
+}
+
+:where(.use-preflight input::placeholder),
+:where(.use-preflight textarea::placeholder) {
+    opacity: 1;
+    color: #9ca3af;
+}
+
+:where(.use-preflight button),
+:where(.use-preflight [role="button"]) {
+    cursor: pointer;
+}
+
+:where(.use-preflight :disabled) {
+    cursor: default;
+}
+
+:where(.use-preflight img),
+:where(.use-preflight svg),
+:where(.use-preflight video),
+:where(.use-preflight canvas),
+:where(.use-preflight audio),
+:where(.use-preflight iframe),
+:where(.use-preflight embed),
+:where(.use-preflight object) {
+    display: block;
+    vertical-align: middle;
+}
+
+:where(.use-preflight img),
+:where(.use-preflight video) {
+    max-width: 100%;
+    height: auto;
+}
