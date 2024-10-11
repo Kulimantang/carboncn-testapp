@@ -1,61 +1,73 @@
 /* preflight.css  */
 
-:where(.use-preflight),
-:where(.use-preflight *),
-:where(.use-preflight::before),
-:where(.use-preflight::after) {
+/*
+ * The styles in this file will provide a style reset for every element
+ * and a base for the tailwind css to build upon
+ *
+ * Since we want to enable the use of the carbon design system
+ * we need to make sure that we dont override the carbon styles
+ * so we cannot use the tailwind preflight
+ *
+ * https://tailwindcss.com/docs/preflight
+ * 
+ * */
+
+
+
+:where(*:not([class^="cds--"])),
+:where(*:not([class^="cds--"])::before),
+:where(*:not([class^="cds--"])::after) {
     box-sizing: border-box;
     border-width: 0;
     border-style: solid;
     border-color: currentcolor;
 }
 
-/* html {
+:where(html) {
     line-height: 1.5;
     text-size-adjust: 100%;
     tab-size: 4;
-    font-family: system-ui;
 }
 
-body {
+:where(body) {
     margin: 0;
     line-height: inherit;
-} */
+}
 
-:where(.use-preflight hr) {
+:where(hr:not([class^="cds--"])) {
     height: 0;
     color: inherit;
     border-top-width: 1px;
 }
 
-:where(.use-preflight abbr:where([title])) {
+:where(abbr:where([title]):not([class^="cds--"])) {
     text-decoration: underline dotted;
 }
 
-:where(.use-preflight h1),
-:where(.use-preflight h2),
-:where(.use-preflight h3),
-:where(.use-preflight h4),
-:where(.use-preflight h5),
-:where(.use-preflight h6) {
+:where(h1:not([class^="cds--"])),
+:where(h2:not([class^="cds--"])),
+:where(h3:not([class^="cds--"])),
+:where(h4:not([class^="cds--"])),
+:where(h5:not([class^="cds--"])),
+:where(h6:not([class^="cds--"])) {
     font-size: inherit;
     font-weight: inherit;
 }
 
-:where(.use-preflight a) {
+:where(a:not([class^="cds--"])) {
     color: inherit;
     text-decoration: inherit;
 }
 
-:where(.use-preflight b),
-:where(.use-preflight strong) {
+:where(b:not([class^="cds--"])),
+:where(strong:not([class^="cds--"])) {
     font-weight: bolder;
 }
 
-:where(.use-preflight code),
-:where(.use-preflight kbd),
-:where(.use-preflight samp),
-:where(.use-preflight pre) {
+:where(code:not([class^="cds--"])),
+:where(kbd:not([class^="cds--"])),
+:where(samp:not([class^="cds--"])),
+:where(pre:not([class^="cds--"])) {
     font-family:
         "fontFamily.mono",
         ui-monospace,
@@ -69,37 +81,37 @@ body {
     font-size: 1em;
 }
 
-:where(.use-preflight small) {
+:where(small:not([class^="cds--"])) {
     font-size: 80%;
 }
 
-:where(.use-preflight sub),
-:where(.use-preflight sup) {
+:where(sub:not([class^="cds--"])),
+:where(sup:not([class^="cds--"])) {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
 }
 
-:where(.use-preflight sub) {
+:where(sub:not([class^="cds--"])) {
     bottom: -0.25em;
 }
 
-:where(.use-preflight sup) {
+:where(sup:not([class^="cds--"])) {
     top: -0.5em;
 }
 
-:where(.use-preflight table) {
+:where(table:not([class^="cds--"])) {
     text-indent: 0;
     border-color: inherit;
     border-collapse: collapse;
 }
 
-:where(.use-preflight button),
-:where(.use-preflight input),
-:where(.use-preflight optgroup),
-:where(.use-preflight select),
-:where(.use-preflight textarea) {
+:where(button:not([class^="cds--"])),
+:where(input:not([class^="cds--"])),
+:where(optgroup:not([class^="cds--"])),
+:where(select:not([class^="cds--"])),
+:where(textarea:not([class^="cds--"])) {
     font-family: inherit;
     font-size: 100%;
     font-weight: inherit;
@@ -109,121 +121,121 @@ body {
     padding: 0;
 }
 
-:where(.use-preflight button),
-:where(.use-preflight select) {
+:where(button:not([class^="cds--"])),
+:where(select:not([class^="cds--"])) {
     text-transform: none;
 }
 
-:where(.use-preflight button),
-:where(.use-preflight [type="button"]),
-:where(.use-preflight [type="reset"]),
-:where(.use-preflight [type="submit"]) {
+:where(button:not([class^="cds--"])),
+:where([type="button"]:not([class^="cds--"])),
+:where([type="reset"]:not([class^="cds--"])),
+:where([type="submit"]:not([class^="cds--"])) {
     appearance: button;
     background-color: transparent;
     background-image: none;
 }
 
-:where(.use-preflight :-moz-focusring) {
+:where(:-moz-focusring:not([class^="cds--"])) {
     outline: auto;
 }
 
-:where(.use-preflight :-moz-ui-invalid) {
+:where(:-moz-ui-invalid:not([class^="cds--"])) {
     box-shadow: none;
 }
 
-:where(.use-preflight progress) {
+:where(progress:not([class^="cds--"])) {
     vertical-align: baseline;
 }
 
-:where(.use-preflight ::-webkit-inner-spin-button),
-:where(.use-preflight ::-webkit-outer-spin-button) {
+:where(::-webkit-inner-spin-button:not([class^="cds--"])),
+:where(::-webkit-outer-spin-button:not([class^="cds--"])) {
     height: auto;
 }
 
-:where(.use-preflight [type="search"]) {
+:where([type="search"]:not([class^="cds--"])) {
     appearance: textfield;
     outline-offset: -2px;
 }
 
-:where(.use-preflight ::-webkit-search-decoration) {
+:where(::-webkit-search-decoration:not([class^="cds--"])) {
     appearance: none;
 }
 
-:where(.use-preflight ::-webkit-file-upload-button) {
+:where(::-webkit-file-upload-button:not([class^="cds--"])) {
     appearance: button;
     font: inherit;
 }
 
-:where(.use-preflight summary) {
+:where(summary:not([class^="cds--"])) {
     display: list-item;
 }
 
-:where(.use-preflight blockquote),
-:where(.use-preflight dl),
-:where(.use-preflight dd),
-:where(.use-preflight h1),
-:where(.use-preflight h2),
-:where(.use-preflight h3),
-:where(.use-preflight h4),
-:where(.use-preflight h5),
-:where(.use-preflight h6),
-:where(.use-preflight hr),
-:where(.use-preflight figure),
-:where(.use-preflight p),
-:where(.use-preflight pre) {
+:where(blockquote:not([class^="cds--"])),
+:where(dl:not([class^="cds--"])),
+:where(dd:not([class^="cds--"])),
+:where(h1:not([class^="cds--"])),
+:where(h2:not([class^="cds--"])),
+:where(h3:not([class^="cds--"])),
+:where(h4:not([class^="cds--"])),
+:where(h5:not([class^="cds--"])),
+:where(h6:not([class^="cds--"])),
+:where(hr:not([class^="cds--"])),
+:where(figure:not([class^="cds--"])),
+:where(p:not([class^="cds--"])),
+:where(pre:not([class^="cds--"])) {
     margin: 0;
 }
 
-:where(.use-preflight fieldset) {
+:where(fieldset:not([class^="cds--"])) {
     margin: 0;
     padding: 0;
 }
 
-:where(.use-preflight legend) {
+:where(legend:not([class^="cds--"])) {
     padding: 0;
 }
 
-:where(.use-preflight ol),
-:where(.use-preflight ul),
-:where(.use-preflight menu) {
+:where(ol:not([class^="cds--"])),
+:where(ul:not([class^="cds--"])),
+:where(menu:not([class^="cds--"])) {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-:where(.use-preflight textarea) {
+:where(textarea:not([class^="cds--"])) {
     resize: vertical;
 }
 
-:where(.use-preflight input::placeholder),
-:where(.use-preflight textarea::placeholder) {
+:where(input::placeholder:not([class^="cds--"])),
+:where(textarea::placeholder:not([class^="cds--"])) {
     opacity: 1;
     color: #9ca3af;
 }
 
-:where(.use-preflight button),
-:where(.use-preflight [role="button"]) {
+:where(button:not([class^="cds--"])),
+:where([role="button"]:not([class^="cds--"])) {
     cursor: pointer;
 }
 
-:where(.use-preflight :disabled) {
+:where(:disabled:not([class^="cds--"])) {
     cursor: default;
 }
 
-:where(.use-preflight img),
-:where(.use-preflight svg),
-:where(.use-preflight video),
-:where(.use-preflight canvas),
-:where(.use-preflight audio),
-:where(.use-preflight iframe),
-:where(.use-preflight embed),
-:where(.use-preflight object) {
+:where(img:not([class^="cds--"])),
+:where(svg:not([class^="cds--"])),
+:where(video:not([class^="cds--"])),
+:where(canvas:not([class^="cds--"])),
+:where(audio:not([class^="cds--"])),
+:where(iframe:not([class^="cds--"])),
+:where(embed:not([class^="cds--"])),
+:where(object:not([class^="cds--"])) {
     display: block;
     vertical-align: middle;
 }
 
-:where(.use-preflight img),
-:where(.use-preflight video) {
+:where(img:not([class^="cds--"])),
+:where(video:not([class^="cds--"])) {
     max-width: 100%;
     height: auto;
 }

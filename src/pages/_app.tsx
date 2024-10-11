@@ -1,7 +1,6 @@
 import Layout from "~/components/layout/Layout";
 import { type AppType } from "next/dist/shared/lib/utils";
 import { RecoilRoot } from "recoil";
-import "~/styles/preflight.css";
 import "~/styles/globals.scss";
 import "~/styles/tailwind.css";
 
