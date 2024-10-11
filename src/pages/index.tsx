@@ -2,6 +2,7 @@ import {
   Accordion as CarbonAccordion,
   AccordionItem as CarbonAccordionItem,
   Button as CarbonButton,
+  Checkbox as CarbonCheckbox,
   Tab as CarbonTab,
   TabList as CarbonTabList,
   TabPanel as CarbonTabPanel,
@@ -16,6 +17,7 @@ import {
   AccordionTrigger,
 } from "~/components/ui/accordion";
 import { Button } from "~/components/ui/button";
+import { Checkbox } from "~/components/ui/checkbox";
 import { Input } from "~/components/ui/input";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "~/components/ui/tabs";
 import { type NextPage } from "next";
@@ -182,6 +184,19 @@ const Home: NextPage = () => {
               <TabsContent value="activity">Tab Panel 3</TabsContent>
               <TabsContent value="settings">Tab Panel 4</TabsContent>
             </Tabs>
+          </div>
+        </div>
+        <div className="grid w-full grid-cols-2 gap-4">
+          <div className="w-full">
+            <CarbonCheckbox id="checkbox-1" labelText="Checkbox label" />
+          </div>
+          <div className="w-full">
+            <div className="flex items-center gap-2">
+              <Checkbox id="checkbox-2" />
+              <label className="text-sm" htmlFor="checkbox-2">
+                Checkbox label
+              </label>
+            </div>
           </div>
         </div>
       </main>

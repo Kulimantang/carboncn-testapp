@@ -13,6 +13,7 @@
     "@carbon/react": "^1.48.1",
     "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
     "@radix-ui/react-accordion": "^1.2.1",
+    "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.0",
     "@radix-ui/react-tabs": "^1.1.1",
     "@t3-oss/env-nextjs": "^0.8.0",
